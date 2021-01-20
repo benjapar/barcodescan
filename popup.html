@@ -1,0 +1,99 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+
+<head>
+  <title>Getting Started Extension's Popup</title>
+  <style>
+    body {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 16px;
+      min-width: 500px;
+      margin: 10px;
+      padding: 10px;
+      background-image: url('icon.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-color: #875A7B;
+      background-position: right;
+    }
+
+    .window {
+      width: 600px;
+      height: 400px;
+    }
+
+    .window-body {
+      height: 400px;
+      overflow: hidden;
+    }
+
+    input[type=text] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      background-color: #007a77;
+      color: #fff;
+      font-size: 18px;
+      border-color: #00A09D;
+      font-weight: bold;
+    }
+
+    input[type=button],
+    input[type=submit],
+    input[type=reset],
+    button {
+      background-color: #007a77;
+      color: #fff;
+      border: none;
+      padding: 12px 20px;
+      text-decoration: none;
+      margin: 25px 0;
+      cursor: pointer;
+      font-size: 18px;
+      border-color: #00A09D;
+      font-weight: bold;
+    }
+
+    h1 {
+      color: #fff;
+    }
+  </style>
+
+  <script src="jquery-2.2.2.min.js"></script>
+  <script src="popup.js"></script>
+</head>
+
+<body>
+  <div class="window">
+    <div class="window-body">
+      <div>
+        <h1>Barcode Scanner</h1>
+        <table>
+          <tr>
+            <td style="width: 70%;"><input id="barcode1" type="text" value="0217350039457604152111281119112837105" />
+            </td>
+            <td><button id="sendScan_1">Send 1st scan</button></td>
+          </tr>
+          <tr>
+            <td style="width: 70%;"><input id="barcode2" type="text" value="00373122100000134609102111283102010300" />
+            </td>
+            <td><button id="sendScan_2">Send 2nd scan</button></td>
+          </tr>
+          <!-- <tr>
+            <td style="width: 70%;"><input id="barcode3" type="text" value="0217350039457604152111281119112837105" />
+            </td>
+            <td><button id="sendScan_3">Send 3rd scan</button></td>
+          </tr> -->
+        </table>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
